@@ -198,3 +198,4 @@ education.display = function(){
 	}
 }
 education.display();
+$("#mapDiv").append(map);
