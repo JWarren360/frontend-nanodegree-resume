@@ -62,7 +62,7 @@ h5 {
 }
 
 
-.date-text {
+.date-text, .location-text {
   font-style: italic;
   font-size: 14px;
   color: #999;
@@ -70,12 +70,7 @@ h5 {
   float: left;
 }
 
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
+
 
 }
 
@@ -127,9 +122,9 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-image: url("../images/Austin_Skyline_at_Dusk2.jpg");
+  background-img: #484848;
 }
 
 .flex-box {
