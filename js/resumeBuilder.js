@@ -1,4 +1,3 @@
-'use strict';
 var bio = {
 	"name" : "John Warren",
 	"role" : "Front-End Web Developer",
@@ -109,6 +108,7 @@ var projects = {
 //building the resume
 //HEADER
 bio.display = function(){
+	'use strict';
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	$("#header").prepend(formattedName, formattedRole);
@@ -116,21 +116,22 @@ bio.display = function(){
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-	$("#topContacts").append(formattedEmail,formattedMobile,formattedGithub, formattedLocation);
+	$("#topContacts, #footerContacts").append(formattedEmail,formattedMobile,formattedGithub, formattedLocation);
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.pictureURL);
 	var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").append(formattedBioPic, formattedWelcomeMessage);
 	if(bio.skills.length){
 		$("#header").append(HTMLskillsStart);
-		for (var i in bio.skills) {
-			var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-			$("#skills").append(formattedSkill);
-		}
+    for (var i in bio.skills) {
+      var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+      $("#skills").append(formattedSkill);
+    }
 	}
 };
 bio.display();
 //WORK EXPERIANCE
 work.display = function(){
+	'use strict';
 	if(work.jobs.length){
 		for(var job in work.jobs){
 			$("#workExperience").append(HTMLworkStart);
@@ -145,10 +146,11 @@ work.display = function(){
 			}
 		}
 	}
-}
+};
 work.display();
 //PROJECTS
 projects.display = function(){
+	'use strict';
 	if(projects.projects.length){
 		for(var i = 0; i < projects.projects.length; i++){
 			$("#projects").append(HTMLprojectStart);
@@ -163,10 +165,11 @@ projects.display = function(){
 
 		}
 	}
-}
+};
 projects.display();
 //EDUCATION
 education.display = function(){
+	'use strict';
 	for (var i = 0; i < education.school.length; i++) {
 		$("#education").append(HTMLschoolStart);
 		var formattedSchoolName = HTMLschoolName.replace("%data%", education.school[i].name);
@@ -184,7 +187,7 @@ education.display = function(){
 		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url);
 		$(".education-entry:last").append(formattedOnlineTitle, formattedOnlineSchool, formattedOnlineDates, formattedOnlineURL);
 	}
-}
+};
 education.display();
 //appending map
 $("#mapDiv").append(googleMap);
