@@ -24,7 +24,7 @@ var education = {
 			"degree": "",
 			"year" : 2012,
 			"major" : "Eletronics Repair",
-			"location" : "Austin"
+			"location" : "Austin, TX"
 		}
 	],
 	"onlineCourses" : [
@@ -42,6 +42,7 @@ var work = {
 			"employer" : "Four Hands Furniture",
 			"position" : "Warehouse Manager",
 			"dates" : "September 2013 - Present",
+			"location" : "Austin, TX",
 			"description" : [
 				"Oversee each day to ensure business runs as smoothly as possible for both customers and employees",
 				"Supervise an average of 4 full-time employees plus frequent temp workers",
@@ -61,6 +62,7 @@ var work = {
 			"employer" : "RoundUp Fabrications",
 			"position" : "Metal Fabricator",
 			"dates" : "April 2013 - September 2013",
+			"location" : "Odessa, TX",
 			"description" : [
 				"Read and interpreted blue prints provided by customer to create their desired product",
 				"Catered mostly to oil field & mechanical based industries",
@@ -73,6 +75,7 @@ var work = {
 			"employer" : "Texas Legislative Services",
 			"position" : "Legislative Correspondent ",
 			"dates" : "December 2012 - April 2013",
+			"location" : "Austin, TX",
 			"description" : [
 				"Summarized committees for the Texas Legislature, recording record votes and documenting hearings",
 				"Recorded bill statuses (Passed, Vetoed, Denied, Signed, etc.)",
@@ -198,4 +201,5 @@ education.display = function(){
 	}
 }
 education.display();
-$("#mapDiv").append(map);
+//appending map
+$("#mapDiv").append(googleMap);
